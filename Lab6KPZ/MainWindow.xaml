@@ -1,0 +1,67 @@
+﻿<Window x:Class="Lab6KPZ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab6KPZ"
+        mc:Ignorable="d"
+         Title="MainWindow" Height="806" Width="1050" Background="Green">
+
+    <Grid  Margin="0,0,0,21">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="383*"/>
+            <ColumnDefinition Width="659*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="269*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="True"   Name="DataGridDrug" Margin="67,10,10,372" Grid.Column="1" />
+        <DataGrid AutoGenerateColumns="True" ColumnWidth="*" Name="DataGridDrugStorage" Margin="67,388,10,20" MouseDoubleClick="DataGridLocation_MouseDoubleClick" Grid.Column="1" />
+
+
+        <Grid Background="GreenYellow" Margin="20,10,10,372" Height="364" >
+
+            <Grid>
+                <TextBox x:Name="TextBoxProductName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="20,35,0,0"/>
+                <TextBox x:Name="TextBoxProductCode" HorizontalAlignment="Left" Margin="20,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="TextBoxExpirationDate" HorizontalAlignment="Left" Margin="20,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="TextBoxDrugStorageId" HorizontalAlignment="Left" Margin="20,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox Name="TextBoxDrugId" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="20,12,0,0"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,13,0,0" TextWrapping="Wrap" Text="DrugId" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,36,0,0" TextWrapping="Wrap" Text="ProductName" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,60,0,0" TextWrapping="Wrap" Text="ProductCode" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,82,0,0" TextWrapping="Wrap" Text="ExpirationDate" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,107,0,0" TextWrapping="Wrap" Text="DrugStorageId" VerticalAlignment="Top"/>
+                <Button Content="Save" Background="MintCream" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="0.968,-0.299" Width="82"/>
+                <Button Content="Update" Background="MintCream" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.968,-0.299" Width="78" Click="Button_Click_2"/>
+                <Button Content="Delete" Background="MintCream" HorizontalAlignment="Right" Margin="0,170,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.968,-0.299" Width="78" Click="Button_Click_3"/>
+                <Image Height="122"  VerticalAlignment="Top" Margin="114.5,200,114.5,0" RenderTransformOrigin="1.29,0.459" Source="transparent-medication-icon-drug-icon-medical-icon-5dd8882086cd26.5712893015744717125522.png"/>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Background="GreenYellow" Height="338" Margin="20,388,10,20" >
+
+            <Grid Margin="0,0,0,0">
+                <Image Height="122" Margin="114.5,150,114.5,0" VerticalAlignment="Top" Source="7183302.png"/>
+
+                <TextBox x:Name="Renewal" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="20,29,0,0"/>
+                <TextBox x:Name="Supply" HorizontalAlignment="Left" Margin="20,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="Capacity" HorizontalAlignment="Left" Margin="20,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,29,0,0" TextWrapping="Wrap" Text="Renewal" VerticalAlignment="Top"/>
+                <Button x:Name="btn2" Background="MintCream" Content="Save" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Click="Button_Click_1"  Width="67"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,52,0,0" TextWrapping="Wrap" Text="Supply" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,75,0,0" TextWrapping="Wrap" Text="Capacity" VerticalAlignment="Top"/>
+                <TextBox Name="id" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="20,8,0,0"/>
+                <TextBlock HorizontalAlignment="Left" Margin="155,8,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top"/>
+                <Button Name="btn3" Content="Update" HorizontalAlignment="Center" Background="MintCream" Margin="0,130,0,0" VerticalAlignment="Top" Click="btn3_Click" Width="67" />
+                <Button Name="btn4" Content="Delete" HorizontalAlignment="Right" Background="MintCream" Margin="0,130,10,0" VerticalAlignment="Top" Click="btn4_Click" Width="67" />
+
+
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
